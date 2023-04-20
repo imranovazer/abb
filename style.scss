@@ -70,6 +70,7 @@ nav {
 
 }
 header {
+    margin-bottom: 20px;
     width: 100%;
     height: 100vh;
     background-image: url('./assets/Layer\ 1\ 5.svg');
@@ -136,4 +137,39 @@ header {
 
     }
     
+}
+.four-option {
+    width: 100%;
+    
+    .container {
+        display: flex;
+        .option {
+            height: 360px;
+            width: 25%; 
+            display: flex;
+            flex-direction: column;
+            font-size: 15px;
+            gap: 48px;
+            font-weight: 700;
+            background-color: #1c2a33;
+            color: #18CFAB;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            img {
+                height: 50px;
+            }
+            &:nth-child(even)
+            {
+                background-color: #18cfab;
+                color: white;
+            }
+
+
+        }
+
+
+
+    }
+
 }
