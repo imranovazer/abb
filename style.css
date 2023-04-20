@@ -17,26 +17,26 @@ li {
   height: 100%;
 }
 
-nav {
+.main-nav {
   height: 80px;
   position: absolute;
   z-index: 9;
   width: 100%;
   background: rgba(94, 93, 88, 0.6);
 }
-nav .container {
+.main-nav .container {
   display: flex;
   justify-content: space-around;
   align-items: center;
   position: relative;
 }
-nav .container .logo {
+.main-nav .container .logo {
   cursor: pointer;
 }
-nav .container .logo img {
+.main-nav .container .logo img {
   height: 100%;
 }
-nav .container ul {
+.main-nav .container ul {
   height: 100%;
   display: flex;
   align-items: center;
@@ -46,17 +46,17 @@ nav .container ul {
   color: rgba(255, 255, 255, 0.6);
   gap: 20px;
 }
-nav .container ul li {
+.main-nav .container ul li {
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   height: 100%;
 }
-nav .container ul li:hover {
+.main-nav .container ul li:hover {
   color: #18CFAB;
 }
-nav .container ul .first {
+.main-nav .container ul .first {
   color: #18CFAB;
   border-bottom: 3px solid #18CFAB;
 }
@@ -152,6 +152,44 @@ header .container .buttons .blue {
 .four-option .container .option:nth-child(even) {
   background-color: #18cfab;
   color: white;
+}
+
+.our-service {
+  width: 100%;
+}
+.our-service .container {
+  padding: 90px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 67px;
+}
+.our-service .container h2 {
+  color: #4E4E4E;
+  font-size: 36px;
+  font-weight: 400;
+}
+.our-service .container .service-nav {
+  width: 930px;
+  display: flex;
+}
+.our-service .container .service-nav .option {
+  padding: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.499);
+  cursor: pointer;
+}
+.our-service .container .content-to-show {
+  width: 930px;
+  display: flex;
+}
+.our-service .container .content-to-show img {
+  width: 200px;
+  height: 139px;
+}
+.our-service .container .content-to-show p {
+  font-size: 13px;
+  color: #777777;
+  padding: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

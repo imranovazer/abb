@@ -16,7 +16,7 @@
 
 
 <body>
-    <nav>
+    <nav class="main-nav">
 
         <div class="container">
 
@@ -80,9 +80,84 @@
 
     </section>
     <section class="our-service">
+        <div class="container">
+            <h2>
+                Our Services
+            </h2>
+
+
+
+            <nav class="service-nav">
+                <div class="option">
+                    Web Designe
+                </div>
+                <div class="option">
+                    Graphic Designe
+                </div>
+                <div class="option">
+                    Online Support
+                </div>
+                <div class="option">
+                    App Design
+                </div>
+                <div class="option">Online Marketing</div>
+                <div class="option">
+                    Seo Srvice
+                </div>
+
+            </nav>
+            <div class="content-to-show">
+                <img src="./assets/Layer 1 5.svg" alt="">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna
+                    aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna
+                    aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum.
+                    Deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adip isicing elit, sed
+                    do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia
+                    deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </div>
+
 
     </section>
 
 </body>
+
+<script>
+    // Get references to the buttons and content div
+    const button1 = document.getElementById("button1");
+    const button2 = document.getElementById("button2");
+    const button3 = document.getElementById("button3");
+    const contentDiv = document.getElementById("content");
+
+    // Define the content for each button
+    const content1 = "<h1>Button 1 Content</h1><p>This is the content for Button 1</p>";
+    const content2 = "<h1>Button 2 Content</h1><p>This is the content for Button 2</p>";
+    const content3 = "<h1>Button 3 Content</h1><p>This is the content for Button 3</p>";
+
+    // Add event listeners to the buttons
+    button1.addEventListener("click", () => {
+        contentDiv.innerHTML = content1;
+    });
+
+    button2.addEventListener("click", () => {
+        contentDiv.innerHTML = content2;
+    });
+
+    button3.addEventListener("click", () => {
+        contentDiv.innerHTML = content3;
+    });
+
+
+
+</script>
 
 </html>

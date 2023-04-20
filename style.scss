@@ -18,11 +18,10 @@ li {
 }
 
 
-nav {
+.main-nav {
     height: 80px;
     position: absolute;
     z-index: 9;
-    
     width: 100%;
     background: rgba(94, 93, 88, 0.6);
     .container {
@@ -172,4 +171,52 @@ header {
 
     }
 
+}
+.our-service
+{
+
+    width: 100%;
+    .container{
+        padding: 90px 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 67px;
+        h2 {
+            color: #4E4E4E;
+            font-size: 36px;
+            font-weight: 400;
+
+        }
+        .service-nav {
+            width: 930px;
+           display: flex;
+           .option {
+            padding: 20px;
+            border: 1px solid rgba(128, 128, 128, 0.499);
+            cursor: pointer;
+           }
+
+
+        }
+        .content-to-show {
+            width: 930px;
+            display: flex;
+            img{
+                width: 200px;
+                height: 139px;
+            }
+            p {
+                font-size: 13px;
+                color: #777777;
+                padding: 20px;
+            }
+
+        }
+
+
+
+
+
+    }
 }
