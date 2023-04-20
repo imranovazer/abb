@@ -88,25 +88,25 @@
 
 
             <nav class="service-nav">
-                <div class="option">
+                <div class="option " id="option1">
                     Web Designe
                 </div>
-                <div class="option">
+                <div class="option " id="option2">
                     Graphic Designe
                 </div>
-                <div class="option">
+                <div class="option " id="option3">
                     Online Support
                 </div>
-                <div class="option">
+                <div class="option " id="option4">
                     App Design
                 </div>
-                <div class="option">Online Marketing</div>
-                <div class="option">
+                <div class="option " id="option5">Online Marketing</div>
+                <div class="option " id="option6">
                     Seo Srvice
                 </div>
 
             </nav>
-            <div class="content-to-show">
+            <div class="content-to-show" id="content">
                 <img src="./assets/Layer 1 5.svg" alt="">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
@@ -133,27 +133,40 @@
 
 <script>
     // Get references to the buttons and content div
-    const button1 = document.getElementById("button1");
-    const button2 = document.getElementById("button2");
-    const button3 = document.getElementById("button3");
+    const option1 = document.getElementById("option1");
+    const option2 = document.getElementById("option2");
+    const option3 = document.getElementById("option3");
+    const option4 = document.getElementById("option4");
+    const option5 = document.getElementById("option5");
+    const option6 = document.getElementById("option6");
     const contentDiv = document.getElementById("content");
 
     // Define the content for each button
-    const content1 = "<h1>Button 1 Content</h1><p>This is the content for Button 1</p>";
-    const content2 = "<h1>Button 2 Content</h1><p>This is the content for Button 2</p>";
-    const content3 = "<h1>Button 3 Content</h1><p>This is the content for Button 3</p>";
+    const content = [
+        { src: "https://cdn.esawebb.org/archives/images/screen/carinanebula3.jpg", text: "Mauris in enim erat. Vestibulum eu dictum turpis, fringilla scelerisque quam. Integer luctus porta nulla, vitae tristique ipsum cursus eu. Suspendisse imperdiet ante et libero malesuada semper. In sit amet odio dolor. Cras lacinia nibh at nulla molestie, ut hendrerit nisi consequat. Mauris nec leo sed nulla placerat consectetur. Integer nulla nulla, finibus commodo cursus vel, ullamcorper vel diam. Proin vestibulum varius aliquet. Vivamus sit amet egestas est." },
+        { src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvIzpE0RtC7z7mNKlGCfZVu-76ycBg8B0nPw&usqp=CAU", text: "Vestibulum ligula felis, tristique vitae nunc id, pharetra dignissim velit. Morbi sit amet magna eget felis ornare bibendum at at ante. Suspendisse lobortis dapibus quam, placerat rutrum tortor sagittis in. Pellentesque lacinia ultrices metus, vel dignissim lectus viverra sed. Curabitur faucibus, massa eget consequat bibendum, lorem enim ornare orci, sed egestas urna diam semper urna. Vivamus augue dolor, sodales et imperdiet sed, rutrum non enim. Donec pellentesque tellus mi, in tincidunt libero scelerisque sed. Proin in nisi diam." },
+        { src: "https://cdn.pixabay.com/photo/2018/01/12/10/19/fantasy-3077928__480.jpg", text: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc. " },
+        { src: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg ", text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)." },
+        { src: "https://cdn.pixabay.com/photo/2016/11/04/21/34/beach-1799006__480.jpg", text: "Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed diam risus, tincidunt a elementum convallis, luctus non enim. Curabitur pulvinar sodales risus. Sed mollis volutpat porttitor. Vestibulum sodales sit amet justo sit amet viverra. Quisque at maximus metus, a porta felis. Nullam magna lorem, fermentum ac diam vel, gravida ullamcorper tortor. Maecenas ligula velit, imperdiet eu felis ac, feugiat blandit nisl. Nulla sit amet lorem nisi. Vestibulum vulputate sem sapien, vel molestie purus consequat quis. Fusce volutpat porta massa, vel condimentum felis lobortis eu." },
+        { src: "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg", text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum" }]
+    const content1 = (src, text) => `<img src="${src}" alt="">
+                <p>
+                   ${text}
+                </p>
+            </div>`;
+
 
     // Add event listeners to the buttons
-    button1.addEventListener("click", () => {
-        contentDiv.innerHTML = content1;
+    option1.addEventListener("click", () => {
+        contentDiv.innerHTML = content1(content[0].src, content[0].text);
     });
 
-    button2.addEventListener("click", () => {
-        contentDiv.innerHTML = content2;
+    option2.addEventListener("click", () => {
+        contentDiv.innerHTML = content1(content[1].src, content[1].text);
     });
 
-    button3.addEventListener("click", () => {
-        contentDiv.innerHTML = content3;
+    option3.addEventListener("click", () => {
+        contentDiv.innerHTML = content1(content[2].src, content[2].text);;
     });
 
 
